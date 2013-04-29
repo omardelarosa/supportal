@@ -1,0 +1,50 @@
+h1. Supportal for Zendesk
+
+p. This is a ready-to-go support article or FAQ portal for your business.  It uses your existing Zendesk content as its database so no SQL is required, but it can be easily added if necessary.  After a little configuration the app is ready to run on a Heroku cedar stack, running rack, and using bundler.
+
+p. You can see a live example at:
+
+http://supportal.herokuapp.com
+
+h2. 1. Getting Started
+
+To get started, just do the following:
+
+1. Clone this repo to your local machine.
+2. Edit the 'zendesk_config.rb' file and fill in your Zendesk API or login information as follows:
+
+<pre>
+
+    config.url = "https://example.zendesk.com/api/v2" # e.g. https://mydesk.zendesk.com/api/v2
+
+    config.username = "user@example.com"
+
+    # Choose one of the following depending on your authentication choice
+    # config.token = "your zendesk token"
+    config.password = "password123"
+
+
+</pre>
+
+h2. Running it locally
+
+<pre>
+  $ git clone git://github.com/omardelarosa/supportal.git
+  $ gem install bundler
+  $ bundle
+  $ bundle exec foreman
+</pre>
+
+Navigate to localhost:5000 | 5100
+
+
+h2. Putting it up on Heroku
+
+<pre>
+  $ git clone git://github.com/omardelarosa/supportal.git
+  $ gem install bundler
+  $ bundle
+  $ heroku create -s cedar yoursupportalapp
+  $ git push heroku master
+  $ bundle exec heroku open
+</pre>

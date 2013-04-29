@@ -1,0 +1,14 @@
+<% results_index = 0 %> 
+
+<% @search_results.each do |result|%>
+
+    <div id="result_<%= results_index %>_container" class="result_container">
+                      <a href="http://patchsupport.patch.com/entries/<%= result.id %>">
+                        <h1 id="result_<%= results_index %>_title" class="result title"><%= result.title %></h1>
+                    </a>
+                      <p id="result_<%= results_index %>_body" class="result body"><%= result.body %></p>
+    </div>
+
+    <% results_index += 1 %>
+
+<% end %>

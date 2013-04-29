@@ -1,0 +1,34 @@
+<% forum_index = 0 %> 
+<% topic_index = 0 %>
+
+<% @forums.each do |forum|%>
+
+    <div id="nav_dropdown_container_<%= forum_index %>" class="dropdown nav_dropdown_container responsive span4">
+      <a id="nav_dropdown_toggle_link_<%= forum_index %>" class="dropdown-toggle nav_dropdown_toggle_link" data-toggle="dropdown" href="#"><%= forum.name %><b class="caret"></b></a>
+      <ul id="nav_dropdown_list_<%= forum_index %>" class="dropdown-menu nav_dropdown_list nav nav-tabs" role="menu" aria-labelledby="dLabel">
+
+        <% @topics.each do |topic| %>
+
+            <% if (topic.forum_id === forum.id) %>
+
+                <li id="nav_dropdown_list_<%= forum_index %>_item_<%= topic_index %>" class="nav_dropdown_list_item">
+                    <a id="nav_dropdown_list_<%= forum_index %>_item_<%= topic_index %>_link" class="nav_dropdown_list_item_link" href="/entries/<%= topic.id.to_s %>"><%= topic.title.to_s %></a>
+                </li>
+                <div class="clear"></div>
+            <% topic_index += 1 %>
+
+            <% end %>
+
+        <% end %>
+
+        <% topic_index = 0 %>
+
+      </ul>
+    </div>
+    <% forum_index += 1 %>
+
+<% end %>
+
+<% forum_index = 0 %> 
+   
+    <script src="../js/bootstrap.js"></script>

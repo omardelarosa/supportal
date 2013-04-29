@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Supportal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Custom Style -->
+    <link href="css/supportal.css" rel="stylesheet">
+    
+</head>
+<body onload="supportal.getNavItems();supportal.checkForUrlVars();">
+
+   
+<div id="main_wrapper">
+
+    <div id="main_container" class="row responsive span10 offset1">
+        <div class="row-fluid">
+                <a href="/"><img id="header_logo" class="responsive span6 offset3" src="img/logo.png" alt="supportal" /></a>
+        </div>
+
+        <form id="search_form" class="form-search responsive offset1">
+        <div class="row-fluid">
+            <div id="search_input" class="input-append responsive span10">
+                    <input id="query_input" class="search-query responsive" onkeyup="supportal.fetchResults()" type="text" placeholder="search" name="query"></input>
+                    <button id="query_submit_button" type="submit" action="javascript:supportal.formFetchResults();" class="btn">Search</button>
+            </div>
+        </div>
+        </form>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="display_area" class="span12">
+                </div>
+            </div>
+        </div>
+
+        <div id="nav_menu" class="row container-fluid span8">
+
+        </div>
+
+        <div id="social_media_container" class="row responsive span6 offset2">
+            <ul id="social_media_list" class="">
+                <li class="social_media_list_item span1"><img class="social_media_list_item_image" src="img/facebook.png" /></li>
+                <li class="social_media_list_item span1"><img class="social_media_list_item_image" src="img/twitter.png" /></li>
+                <li class="social_media_list_item span1"><img class="social_media_list_item_image" src="img/blog.png" /></li>
+                <li class="social_media_list_item span1"><img class="social_media_list_item_image" src="img/googleplus.png" /></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+
+        
+
+        
+
+    </div> <!--- end main_container -->
+    <div class="clear"></div>
+    <div id="footer" class="row span6 offset4">
+        &copy; 2013 <a href="http://www.omardelarosa.com">omar delarosa</a> | built on <a href="http://www.sinatrarb.com">sinatra</a>.    
+    </div>
+
+</div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/supportal.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+</body>
+</html>
