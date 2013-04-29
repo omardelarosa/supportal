@@ -1,3 +1,5 @@
+<img src="http://2.bp.blogspot.com/-EHbZ3eh2U1g/UX72fjCPRYI/AAAAAAAAAjE/WySZQmG9QyM/s640/logo.png" />
+
 h1. Supportal for Zendesk
 
 p. This is a ready-to-go support article or FAQ portal for your business.  It uses your existing Zendesk content as its database so no SQL is required, but it can be easily added if necessary.  After a little configuration the app is ready to run on a Heroku cedar stack, running rack, and using bundler.
